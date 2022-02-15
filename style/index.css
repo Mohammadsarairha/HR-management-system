@@ -1,0 +1,38 @@
+body {margin:0;}
+
+.indexh{
+    display:flex;
+    align-items: center;
+    height: 60px;
+    background-color:#B33030;
+    justify-content:left;
+}
+.indexh nav a{
+    text-transform: uppercase;
+    font-size: 15px;
+    padding:20px;
+    color: #fff;
+    text-decoration:none;
+}
+
+.indexF{
+    position:absolute;
+    width: 100%;
+    align-items: center;
+    height: 60px;
+    background-color:#B33030;
+    color: #fff;
+    text-align: center;
+}
+  
+.mainDiv{
+color: #B33030;
+text-align: center;
+font-size: 15px;
+align-items: center;
+}
+.mainDiv img{
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    }

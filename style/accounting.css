@@ -1,0 +1,27 @@
+body {margin:0;}
+
+.accountH{
+    display:flex;
+    align-items: center;
+    height: 60px;
+    background-color:#B33030;
+    justify-content:left;
+}
+.accountH nav a{
+    text-transform: uppercase;
+    font-size: 15px;
+    padding:20px;
+    color: #fff;
+    text-decoration:none;
+}
+
+.accountF{
+    position:absolute;
+    bottom:0;
+    width: 100%;
+    align-items: center;
+    height: 60px;
+    background-color:#B33030;
+    color: #fff;
+    text-align: center;
+}

@@ -36,11 +36,11 @@ employee.prototype.render = function () {
     let dept = document.createElement("p");
     dept.textContent = `Department: ${this.department}-ID: ${this.level}`;
     div.appendChild(dept);
-        
+
     let salry = document.createElement("p");
     dept.textContent = ` ${this.salary}`;
     div.appendChild(salry);
-        
+
 
 }
 

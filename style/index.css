@@ -13,7 +13,7 @@ body {
     display:flex;
     align-items: center;
     height: 60px;
-    background-color:#B33030;
+    background-color:#398AB9;
     justify-content:left;
 }
 .indexh nav a{
@@ -23,68 +23,78 @@ body {
     color: #fff;
     text-decoration:none;
 }
+
+.fieldForm{
+    margin: auto;
+    width: 50%;
+    border: 1x solid black;
+    margin-top: 50px;
+    border-radius: 4px;
+}
+
 .mainDiv form {
     display: grid;
-    grid-template-columns: 1fr 85%;
-    margin-right: 40%;
-    padding: 20px;
+    grid-template-columns: 1fr 80%;
+    align-items: center;
     font-family: 'Roboto Condensed', sans-serif;
 }
 .mainDiv form input,select {
-  padding: 10px;
+  padding: 5px;
+  width: auto;
   margin: 10px;
   font-size: 15px;
+  border-radius: 4px;
 }
 
 .mainDiv form label{
+    width: auto;
     text-align: center;
-    margin: auto;
     font-size: 15px;
 }
 .mainDiv form input[type=submit]{
     width: 50%;
     margin: auto;
-    margin-top: 20px;
     border: none;
-    background-color: #B33030; 
-   border-radius: 8px;
-   color: #fff;
+    background-color: #398AB9; 
+    border-radius: 8px;
+    color: #fff;
  }
  .mainDiv form input[type=submit]:hover{
-     color:#B33030 ;
-     background-color: #000;
+     color:#fff ;
+     background-color: #1C658C;
  }
 
- .flexCard{
+ .flexDiv{
     display: flex;
-    flex-direction:row;
-    flex: 0 0 25%;
+    flex-wrap: wrap;
+    padding-top: 50px;
   }
   
-  .flexCard > div {
-    background-color: #24A19C;
+  .flexCard{
     margin: 10px;
-    padding: 20px;
-    font-size: 15px;
+    width: 20%;
+    padding: 22px;
+    border: 1px solid black;
+    background-color: #219F94;
+    border-radius: 8px;
   }
   .flexCard img{
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     width: 150px;
     height: 150px;
+    border-radius: 100px;
 }
-
-
 .flexCard p{
     width: auto;
     text-align: center;
 }
  .indexF{
+     display: block;
     margin-top: auto;
     align-items: center;
     height: 60px;
-    background-color:#B33030;
+    background-color:#398AB9;
     color: #fff;
     text-align: center;
 }

@@ -1,4 +1,13 @@
-body {margin:0;}
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+body {
+    margin:0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
 
 .indexh{
     display:flex;
@@ -14,25 +23,68 @@ body {margin:0;}
     color: #fff;
     text-decoration:none;
 }
+.mainDiv form {
+    display: grid;
+    grid-template-columns: 1fr 85%;
+    margin-right: 40%;
+    padding: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.mainDiv form input,select {
+  padding: 10px;
+  margin: 10px;
+  font-size: 15px;
+}
 
-.indexF{
-    position:absolute;
-    width: 100%;
+.mainDiv form label{
+    text-align: center;
+    margin: auto;
+    font-size: 15px;
+}
+.mainDiv form input[type=submit]{
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    border: none;
+    background-color: #B33030; 
+   border-radius: 8px;
+   color: #fff;
+ }
+ .mainDiv form input[type=submit]:hover{
+     color:#B33030 ;
+     background-color: #000;
+ }
+
+ .flexCard{
+    display: flex;
+    flex-direction:row;
+    flex: 0 0 25%;
+  }
+  
+  .flexCard > div {
+    background-color: #24A19C;
+    margin: 10px;
+    padding: 20px;
+    font-size: 15px;
+  }
+  .flexCard img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: 150px;
+}
+
+
+.flexCard p{
+    width: auto;
+    text-align: center;
+}
+ .indexF{
+    margin-top: auto;
     align-items: center;
     height: 60px;
     background-color:#B33030;
     color: #fff;
     text-align: center;
 }
-  
-.mainDiv{
-color: #B33030;
-text-align: center;
-font-size: 15px;
-align-items: center;
-}
-.mainDiv img{
-    width: 100px;
-    height: 100px;
-    align-items: center;
-    }

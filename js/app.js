@@ -23,7 +23,7 @@ employee.prototype.getId = function () {
 }
 //----------Generate a unique id--------//
 
-
+//----------Generate random salary based on level--------//
 employee.prototype.generateSalary = function () {
     let min;
     let max;
@@ -42,6 +42,8 @@ employee.prototype.generateSalary = function () {
     randomSalary *= 0.75;
     this.salary = randomSalary;
 }
+//----------Generate random salary based on level--------//
+
 
 //---------Add Employees-------//
 
@@ -54,6 +56,27 @@ let rana = new employee("Rana Saleh", "Development", "Junior", "./assets/img/Ran
 let hadi = new employee("Hadi Ahmad", "Finance", "Mid-Senior", "./assets/img/Hadi.jpg");
 let rania = new employee("Lana Ali", "Finance", "Senior", "./assets/img/Lana.jpg");
 //---------Add Employees-------//
+
+//-----------Save all employees in local storage----------//
+function saveEmployees() {
+    let formatedData = JSON.stringify(allEmployee);
+    localStorage.setItem("Employees", formatedData);
+}
+
+//-------get Employees for storage---------
+function getEmployees() {
+    let emp = localStorage.getItem("Employees");
+    let parseEmps = JSON.parse(emp);
+    if (parseEmps != null) {
+        allEmployee = [];
+        for (let i = 0; i < parseEmps.length; i++) {
+            new employee(parseEmps[i].fullName, parseEmps[i].department, parseEmps[i].level, parseEmps[i].imageUrl);
+        };
+    }
+
+    renderAll();
+}
+//-----------Save all employees in local storage----------//
 
 
 //---------Render all employees in DOM ---------------//
@@ -97,6 +120,7 @@ function handelSubmit(event) {
     let newEmp = new employee(name, dept, level, img);
     newEmp.getId();
     newEmp.generateSalary();
+    saveEmployees();
     renderAll();
     form.reset();
 }
@@ -110,6 +134,8 @@ function renderAll() {
         allEmployee[i].generateSalary();
         allEmployee[i].render();
     }
+    saveEmployees();
 };
 
 renderAll();
+getEmployees();

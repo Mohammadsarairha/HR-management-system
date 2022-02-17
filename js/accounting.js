@@ -12,7 +12,7 @@ let adminEmp = 0;
 let marketingEmp = 0;
 let developerEmp = 0;
 let financeEmp = 0;
-
+let allAvarg = 0;
 let allDept = ["Administration", "Marketing", "Development", "Finance"];
 
 let allEmployee = [];
@@ -70,8 +70,9 @@ function renderEmployees() {
             tr.appendChild(empsalary);
 
             let avgsalary = document.createElement("td");
-            avgsalary.textContent = Math.round((parseInt(admiSalary) / adminEmp));
+            avgsalary.textContent = (parseInt(admiSalary) / adminEmp);
             tr.appendChild(avgsalary);
+            allAvarg += (parseInt(admiSalary) / adminEmp);
 
         } else if (dept == "Marketing") {
 
@@ -91,8 +92,9 @@ function renderEmployees() {
             tr.appendChild(empsalary);
 
             let avgsalary = document.createElement("td");
-            avgsalary.textContent = Math.round((parseInt(marketingSalary) / marketingEmp));
+            avgsalary.textContent = (parseInt(marketingSalary) / marketingEmp);
             tr.appendChild(avgsalary);
+            allAvarg += (parseInt(marketingSalary) / marketingEmp);
 
         } else if (dept == "Development") {
 
@@ -112,8 +114,9 @@ function renderEmployees() {
             tr.appendChild(empsalary);
 
             let avgsalary = document.createElement("td");
-            avgsalary.textContent = Math.round((parseInt(developSalary) / developerEmp));
+            avgsalary.textContent = (parseInt(developSalary) / developerEmp);
             tr.appendChild(avgsalary);
+            allAvarg += (parseInt(developSalary) / developerEmp);
 
         } else {
 
@@ -133,8 +136,9 @@ function renderEmployees() {
             tr.appendChild(empsalary);
 
             let avgsalary = document.createElement("td");
-            avgsalary.textContent = Math.round((parseInt(financeSalary) / financeEmp));
+            avgsalary.textContent = (parseInt(financeSalary) / financeEmp);
             tr.appendChild(avgsalary);
+            allAvarg += (parseInt(financeSalary) / financeEmp);
         }
     }
 
@@ -154,7 +158,7 @@ function renderEmployees() {
     tr.appendChild(salaryTotal);
 
     let avgTotal = document.createElement("td");
-    avgTotal.textContent = Math.round((parseInt(allDepSalay) / allEmpNum));
+    avgTotal.textContent = allAvarg;
     tr.appendChild(avgTotal);
 }
 
